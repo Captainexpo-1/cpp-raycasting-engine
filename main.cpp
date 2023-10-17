@@ -224,7 +224,7 @@ void castRays(){
             int row = std::round((targy / tileSize));
 
             int cursquare = row * mapSize + col;
-            int isspr = isSprite(round(targx), round(targy));
+            int isspr = isSprite(round(targx), round(targy)); //TODO: This is the problem, just remove the round() function calls
             //std::cout << std::to_string(isspr) + "\n";
             if(isspr != -1){
                 drawSprite(sprites[isspr], windowWidth/numRays*ray);
